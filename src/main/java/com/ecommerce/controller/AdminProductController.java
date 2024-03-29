@@ -29,7 +29,7 @@ public class AdminProductController {
 		this.productService = productService;
 	}
 
-	@PostMapping("/create")
+	@PostMapping("/")
 	public ResponseEntity<Product> createProductHandler(@RequestBody CreateProductRequest req) throws ProductException {
 
 		Product createdProduct = productService.createProduct(req);
