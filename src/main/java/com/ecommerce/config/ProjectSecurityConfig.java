@@ -44,13 +44,15 @@ public class ProjectSecurityConfig {
                                                                     "http://localhost:3000", 
                                                                     "acrid-wound-production.up.railway.app", 
                                                                     "http://localhost:4200"));
-                        config.setAllowedMethods(Arrays.asList("GET", "POST", "DELETE", "PUT"));
-                        config.setAllowedHeaders(Collections.singletonList("*"));
+                        config.setAllowedMethods(Collections.singletonList("*"));
                         config.setAllowCredentials(true);
+                        config.setAllowedHeaders(Collections.singletonList("*"));
                         config.setExposedHeaders(Arrays.asList("Authorization"));
                         config.setMaxAge(3600L);
                         return config;
                     }
+
+                    
                 }))
                 .csrf((csrf) -> csrf.csrfTokenRequestHandler(requestHandler)
                         .ignoringRequestMatchers("/auth/signup", "/api/**", "/auth/signin")
