@@ -40,6 +40,7 @@ public class ProjectSecurityConfig {
                     public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                         CorsConfiguration config = new CorsConfiguration();
                         config.setAllowedOrigins(Arrays.asList("https://afghan-couture.vercel.app/",
+                                "acrid-wound-production.up.railway.app",
                                 "https://mu-afghanculture.com/",
                                 "http://localhost:3000",
                                 "acrid-wound-production.up.railway.app",
