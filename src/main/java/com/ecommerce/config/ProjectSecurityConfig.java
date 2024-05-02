@@ -39,12 +39,7 @@ public class ProjectSecurityConfig {
                     @Override
                     public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                         CorsConfiguration config = new CorsConfiguration();
-                        config.setAllowedOrigins(Arrays.asList("https://afghan-couture.vercel.app/",
-                                "https://acrid-wound-production.up.railway.app/",
-                                "https://mu-afghanculture.com/",
-                                "http://localhost:3000",
-                                "acrid-wound-production.up.railway.app",
-                                "http://localhost:4200"));
+                        config.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
                         config.setAllowedMethods(Collections.singletonList("*"));
                         config.setAllowCredentials(true);
                         config.setAllowedHeaders(Collections.singletonList("*"));

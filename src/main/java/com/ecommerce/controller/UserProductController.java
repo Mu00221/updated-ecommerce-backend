@@ -18,7 +18,6 @@ import com.ecommerce.service.ProductService;
 import com.ecommerce.user.domain.ProductSubCategory;
 
 @RestController
-@CrossOrigin("*")
 @RequestMapping("/api")
 public class UserProductController {
 	

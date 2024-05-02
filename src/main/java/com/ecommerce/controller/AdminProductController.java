@@ -21,7 +21,6 @@ import com.ecommerce.response.ApiResponse;
 import com.ecommerce.service.ProductService;
 
 @RestController
-@CrossOrigin("*")
 @RequestMapping("/api/admin/products")
 public class AdminProductController {
 

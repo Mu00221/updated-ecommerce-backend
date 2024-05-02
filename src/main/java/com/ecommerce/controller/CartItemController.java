@@ -33,7 +33,7 @@ public class CartItemController {
 		this.userService=userService;
 	}
 	
-	@DeleteMapping("/{cartItemId}")
+	@DeleteMapping("/delete/{cartItemId}")
 	public ResponseEntity<ApiResponse>deleteCartItemHandler(@PathVariable Long cartItemId, @RequestHeader("Authorization")String jwt) throws CartItemException, UserException{
 		
 		User user=userService.findUserProfileByJwt(jwt);
@@ -44,7 +44,7 @@ public class CartItemController {
 		return new ResponseEntity<ApiResponse>(res,HttpStatus.ACCEPTED);
 	}
 	
-	@PutMapping("/{cartItemId}")
+	@PutMapping("/update/{cartItemId}")
 	public ResponseEntity<CartItem>updateCartItemHandler(@PathVariable Long cartItemId, @RequestBody CartItem cartItem, @RequestHeader("Authorization")String jwt) throws CartItemException, UserException{
 		
 		User user=userService.findUserProfileByJwt(jwt);

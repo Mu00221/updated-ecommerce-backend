@@ -36,7 +36,7 @@ public class OrderController {
 		this.userService=userService;
 	}
 	
-	@PostMapping("/")
+	@PostMapping("/create")
 	public ResponseEntity<Order> createOrderHandler(@RequestBody Address spippingAddress,
 			@RequestHeader("Authorization")String jwt) throws UserException{
 		
@@ -56,7 +56,7 @@ public class OrderController {
 		return new ResponseEntity<>(orders,HttpStatus.ACCEPTED);
 	}
 	
-	@GetMapping("/{orderId}")
+	@GetMapping("find/{orderId}")
 	public ResponseEntity< Order> findOrderHandler(@PathVariable Long orderId, @RequestHeader("Authorization") 
 	String jwt) throws OrderException, UserException{
 		
