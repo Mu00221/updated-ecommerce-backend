@@ -31,7 +31,7 @@ public class CartController {
 		this.userService=userService;
 	}
 	
-	@GetMapping("/find")
+	@GetMapping("/")
 	public ResponseEntity<Cart> findUserCartHandler(@RequestHeader("Authorization") String jwt) throws UserException{
 		
 		User user=userService.findUserProfileByJwt(jwt);

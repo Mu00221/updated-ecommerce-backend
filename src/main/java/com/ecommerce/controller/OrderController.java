@@ -36,7 +36,7 @@ public class OrderController {
 		this.userService=userService;
 	}
 	
-	@PostMapping("/create")
+	@PostMapping("/")
 	public ResponseEntity<Order> createOrderHandler(@RequestBody Address spippingAddress,
 			@RequestHeader("Authorization")String jwt) throws UserException{
 		
